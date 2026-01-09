@@ -1,0 +1,243 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 320px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #24292f;
+  background: #ffffff;
+}
+
+#app {
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d0d7de;
+}
+
+.header h1 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-size: 12px;
+}
+
+.status.connected {
+  background: #dafbe1;
+  color: #1a7f37;
+}
+
+.status.disconnected {
+  background: #ffebe9;
+  color: #cf222e;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.status.connected .status-dot {
+  background: #1a7f37;
+}
+
+.status.disconnected .status-dot {
+  background: #cf222e;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: #24292f;
+}
+
+.help-text {
+  font-size: 11px;
+  color: #656d76;
+  margin-bottom: 8px;
+}
+
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: inherit;
+}
+
+input[type="password"]:focus,
+input[type="text"]:focus {
+  outline: none;
+  border-color: #0969da;
+  box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.1);
+}
+
+.button-group {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+button {
+  flex: 1;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background-color 0.15s;
+}
+
+button.primary {
+  background: #2da44e;
+  color: white;
+  border-color: #2da44e;
+}
+
+button.primary:hover {
+  background: #2c974b;
+}
+
+button.primary:disabled {
+  background: #94d3a2;
+  border-color: #94d3a2;
+  cursor: not-allowed;
+}
+
+button.secondary {
+  background: #f6f8fa;
+  color: #24292f;
+  border-color: #d0d7de;
+}
+
+button.secondary:hover {
+  background: #f3f4f6;
+}
+
+button.secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button.text-btn {
+  flex: none;
+  width: 100%;
+  background: none;
+  border: none;
+  color: #656d76;
+  font-size: 12px;
+  padding: 8px;
+  margin-top: 8px;
+}
+
+button.text-btn:hover {
+  color: #24292f;
+  text-decoration: underline;
+}
+
+.info-link {
+  display: block;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #d0d7de;
+  font-size: 12px;
+  color: #0969da;
+  text-decoration: none;
+}
+
+.info-link:hover {
+  text-decoration: underline;
+}
+
+.message {
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+.message.success {
+  background: #dafbe1;
+  color: #1a7f37;
+}
+
+.message.error {
+  background: #ffebe9;
+  color: #cf222e;
+}
+
+/* Rate Limit Styles */
+.rate-limit {
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-size: 12px;
+}
+
+.rate-limit.loading {
+  background: #f6f8fa;
+  color: #656d76;
+}
+
+.rate-limit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.rate-limit-label {
+  font-weight: 500;
+}
+
+.rate-limit-reset {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.rate-limit-bar-container {
+  height: 4px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.rate-limit-bar {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.rate-limit-value {
+  font-size: 11px;
+  opacity: 0.9;
+}
