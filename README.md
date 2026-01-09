@@ -4,6 +4,10 @@
 
 A Chrome extension that helps maintainers instantly assess PR authors by analyzing their contribution history across all of GitHub.
 
+![SlopScore Demo](demo.gif)
+
+[Watch full demo (2 min)](https://youtu.be/Y5pgfYhbzMA)
+
 ## Why?
 
 GitHub only tells you if someone is a "first-time contributor" to your repo. It doesn't tell you if they have a history of rejected PRs, spam contributions, or suspicious patterns elsewhere.
